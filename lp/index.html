@@ -421,7 +421,7 @@
 
           <div class="row">
               <div class="col-md-8 mx-auto">
-                  <form method="post" name="myemailform" id="myemailform">
+                  <form method="post" name="myemailform" id="myemailform" action="form-to-email.php">
                       <fieldset class="form-group"><input type="text" class="form-control form-control-sm" id="name" name="name"  placeholder="seu nome aqui..."></fieldset>
                       <fieldset class="form-group"><input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="seu e-mail aqui..."></fieldset>
                       <fieldset class="form-group"><textarea class="form-control form-control-sm" id="mensagem" name="mensagem" placeholder="sua mensagem aqui..." rows="6"></textarea></fieldset>
@@ -478,27 +478,6 @@
       </section>
       <!-- END FOOTER --> 
 
-      <script>
-        
-        const myemailform = document.getElementById("myemailform");
-
-        myemailform.addEventListener("submit", (e) => {
-
-          e.preventDefault();
-
-          const request = new XMLHttpRequest();
-
-          request.open("post", "send.php");
-
-          request.onload = function(){
-              console.log(request.responseText);
-          }
-
-            request.send(new FormData(myemailform));
-
-        });
-
-      </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
