@@ -44,6 +44,14 @@ body, html {
 	font-family: 'PT Serif', serif;
 }
 
+.navbar .navbar-brand{
+	color:  #be2835;
+}
+
+.navbar .navbar-brand:hover{
+	color:  #fff;
+}
+
 .navbar .navbar-nav .nav-link{
 	color: #d1d1d1;
 }
@@ -60,9 +68,9 @@ body, html {
 /*HEADER*/
 
 #header {
-	background: url(../img/stars-bg.jpg) center center no-repeat;
+	background: url(../img/bg.png) center center no-repeat;
 	background-size: cover;
-	height: 100%;
+	height: 105%;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -115,20 +123,13 @@ body, html {
 	background: #be2835;
 }
 
-/*QUEM SOMOS*/
-
-#quem{
-	padding: 5rem 0;
-	background-color: #f6f6f6;
-}
-
-#quem .btn-quem{
+#social .btn-quem{
 	background-color: #be2835;
 	color: #fff;
 	width: 50%;
 }
 
-#quem .btn-quem:hover{
+#social .btn-quem:hover{
 	background-color: transparent;
 	border: 1px solid #be2835;
 	color: #be2835;

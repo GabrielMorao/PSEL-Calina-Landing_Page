@@ -1,19 +1,26 @@
 <?php
 
-ini_set("SMTP","smtp.gmail.com");
-ini_set("smtp_port","587");
+ini_set("SMTP", "https://romantic-goldberg-a56118.netlify.com");
+ini_set("smtp_port", "25");
 
-if (isset($_POST['send'])) {
-  $to = 'bielmorao@gmail.com';
-  $name = $_POST['name'];
-  $from = $_POST['email'];
-  $subject = 'Contato do cliente';
-  $message = $_POST['mensagem'];
-  echo $subject, " from ", $name, " at ", $from, "<br/>";
-echo $message;
-    
-mail($to, $subject, $message);
+if ($_POST['send']) {
+  # code...
 
+  if(!$_POST['name']){
+      $error="<br/>- Por favor entre com seu nome";
+  }
+  if(!$_POST['email']){
+      $error="<br/>- Por favor entre com seu email";
+  }
+  if(!$_POST['mensagem']){
+      $error="<br/>- Por favor entre com sua mensagem";
+  }
+    mail("bielmorao@gmail.com","contato message","Name: ".$_POST['name']."
+      Email: ".$_POST['email']."
+      Mensagem: ".$_POST['mensagem']);
+
+    {
+      $result="Obrigado. Entramemos em contato em breve";
+    }
 }
-
-?>
+ ?>
