@@ -14,6 +14,20 @@
 	$sbj_owner='Newsletter subscription request from ';
 	$header="Content-type: text/html; charset=utf-8 \r\n".'From: '.$email;
 
+/*	echo $name;
+	echo "<br />";
+	echo $email;
+	echo "<br />";
+	echo $to;
+	echo "<br />";
+	echo $message;
+	echo "<br />";
+	echo $sbj_owner;
+	echo "<br />";
+	echo $header;
+	echo "<br />";*/
+
+
 	
 	$success = mail($to, $sbj_owner, $message, $header);
 		if (!$success) {
