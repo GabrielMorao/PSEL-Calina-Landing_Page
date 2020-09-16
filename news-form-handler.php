@@ -2,20 +2,19 @@
 
 /*
 This code was implemented based on email_handler from this website:
-https://form.guide/contact-form/php-email-contact-form.htmll
+https://form.guide/contact-form/php-email-contact-form.html
 */
 
 $errors = '';
 $myemail = 'gabrielmunizmorao@gmail.com';//<-----emails to whom the form will be sended.
 $senderemail = 'noreply@contraterpg.com';//<-----generic email adress.
-if(empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['message']))
+if(empty($_POST['news_name'])  || empty($_POST['news_email']) )
 {
     $errors .= "\n Error: all fields are required";
 }
 
-$name = $_POST['name']; 
-$email_address = $_POST['email']; 
-$mensagem = $_POST['message']; 
+$name = $_POST['news_name']; 
+$email_address = $_POST['news_email']; 
 
 //Verify the email adress
 if (!preg_match(
@@ -29,18 +28,21 @@ $email_address))
 if( empty($errors))
 {
 	$to = $myemail; 
-	$email_subject = "Contato de $name";
-	$email_body = "Obrigado por se entrar em contato.\n ".
-	"Aqui estão os dados do formulário:\n Nome: $name \n Email: $email_address \n Mensagem: $mensagem"; 
+	$email_subject = "Cadastro de $name";
+	$email_body = "Novo cadastro realizado.\n ".
+	"Aqui estão os dados do formulário:\n Nome: $name \n Email: $email_address"; 
 	
 	$headers = "From: $senderemail\n"; 
 	$headers .= "Reply-To: $email_address";
 	
 	mail($to,$email_subject,$email_body,$headers);
+
 	//redirect to the 'thank you' page
-	header('Location: contact-form-thank-you.html');
+	header('Location: news-form-thank-you.html');
+	
 } 
 ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 <head>

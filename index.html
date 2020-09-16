@@ -53,16 +53,16 @@
               <div class="col-md-6 header-right d-none d-block">
                 <p>Quer receber novidades sobre nossos serviços? Cadastre-se grátis</p>
                 
-                <form method="post" name="novidadesform" id="novidadesform" data-netlify="true" action="form-to-email.php">
+                <form method="post" name="novidadesform" id="novidadesform" data-netlify="true" action="news-form-handler.php">
                     <fieldset class="form-group">
                       <label class="sr-only">nome</label>
-                      <input type="text" class="form-control" placeholder="seu nome aqui...">
+                      <input type="text" class="form-control" id="news_name" name="news_name" placeholder="seu nome aqui...">
                     </fieldset>
                     <fieldset class="form-group">
                       <label class="sr-only">email</label>
-                      <input type="email" class="form-control" placeholder="seu e-mail aqui...">
+                      <input type="email" class="form-control" id="news_email" name="news_email" placeholder="seu e-mail aqui...">
                     </fieldset>
-                    <button type="submit" class="btn btn-outline-info btn-block" name="send" value="Send Message">cadastre-se</button>
+                    <button type="submit" class="btn btn-outline-info btn-block" name="news_submit" id="news_submit" value="Submit">Cadastre-se</button>
 
                 </form>
 
