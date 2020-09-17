@@ -6,7 +6,7 @@ https://form.guide/contact-form/php-email-contact-form.htmll
 */
 
 $errors = '';
-$myemail = 'gabrielmunizmorao@gmail.com';//<-----emails to whom the form will be sended.
+$myemail = 'leandro@calina.ag, gabrielmunizmorao@gmail.com';//<-----emails to whom the form will be sended.
 $senderemail = 'noreply@contraterpg.com';//<-----generic email adress.
 if(empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['message']))
 {
